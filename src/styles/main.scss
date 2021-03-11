@@ -8,14 +8,22 @@
 
 $light-clor: #fff;
 $accent-color:  #65e496;
+$bg-light-color: #f5f6fa;
+$bg-dark-color: #44444f;
 
 h1, h2, h2, h3, h4, p {
     padding: 0;
     margin: 0;
 }
 
+h3 {
+    font-size: 24px;
+}
+
 body {
     font-family: 'Roboto Slab', serif;
+    font-size: 15px;
+    line-height: 24px;
 }
 .wrap {
     max-width: 1170px;
@@ -69,11 +77,15 @@ body {
 .block-text {
     flex-basis: calc(100% - 500px);
     &__name {
-        font-family: 'Open Sans', sans-serif; 
+        font-family: 'Roboto Slab', serif; 
         font-size: 18px; 
-        letter-spacing: 0.7;
+        letter-spacing: 0.7px;
         margin-bottom: 30px;
         
+    }
+    &__name_top {
+        margin-top: 16px;
+        margin-left: 0;
     }
     &__title {
         font-size: 48px;
@@ -94,7 +106,7 @@ body {
         font-size: 15px;
         line-height: 24px;
         margin-bottom: 24px; 
-        letter-spacing: 0.7px; 
+        letter-spacing: 0.75px; 
     }
     &__btn {
         display: block;
@@ -126,5 +138,138 @@ body {
         background-image: url(../img/book.svg);
         background-repeat: no-repeat;
         flex-basis: 447px;
+    }
+}
+.page {
+    padding-top: 161px;
+    &_grey {
+        background-color:$bg-light-color;
+    }
+    &__title {
+        font-size: 48px;
+        text-align: center;
+        margin-bottom: 25px;
+        letter-spacing: 2px;
+    }
+    &__subtitle {
+        font-size: 18px;
+        color: $accent-color;
+        text-align: center;        
+        letter-spacing: 0.9px;
+    }
+}
+.block-author{ 
+    display: flex;
+    justify-content: space-between;
+}
+.block-ava {
+   position: relative;
+    &__svg {
+        position: absolute;
+        right: 0;
+        z-index: -1;
+    }
+    &__img {
+        margin-top: 47px;
+        margin-right: 44px;
+      
+    }
+}
+.block-counter {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 152px;
+    p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        text-align: center;
+        letter-spacing: 0.7px;
+        span {
+            font-family: 'Roboto Slab', serif; 
+            font-size: 80px;
+            font-weight: 100;
+            display:block;
+            margin-top: 152px;
+            margin-bottom: 45px;
+            color: $accent-color;
+        } 
+    }
+}
+.block-about {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 82px;
+    h3 {
+        margin-bottom: 15px;
+        letter-spacing: 1.2px;
+    }
+    p {
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: 0.6px;
+    }
+    &-text {
+        flex-basis: 41%;
+    }
+    &-table {
+        flex-basis: 49%;
+        &__list {
+            margin: 0;
+            padding: 0;
+            counter-reset: list;
+            column-count: 2;
+            &>li {
+                position: relative;
+                padding-left: 36px;
+                counter-increment: list;
+                list-style-type: none;
+                margin-bottom: 8px;
+                letter-spacing: 0.7px;
+                &::before {
+                    content: counter(list)". ";
+                }
+                &::after {
+                    content: "+";
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 15px;
+                    line-height: 22px;
+                    position: absolute;
+                    left: 0;
+                    background-color: $accent-color;
+                    color: $light-clor;
+                    padding: 0px 7px;
+                }
+            }
+        }
+    }
+    &__btn {
+    background-color: #65e496;
+    color: #fff;
+    border-radius: 3px;
+    border-style: none;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 30px;
+    letter-spacing: 0.7px;
+    padding: 15px 43px 14px 46px;
+    }
+    &-feature {
+        display: flex;
+        padding-top: 29px;            
+        p {
+            font-family: 'Roboto Slab', serif; 
+            font-size: 18px;                
+            }
+        &__text {
+            flex-basis: 30%;
+            padding-left: 10px;
+
+        }
+        &__table {
+            flex-basis: 18%;
+            column-count: 3;
+        }
+        
+
+
     }
 }
