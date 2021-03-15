@@ -26,6 +26,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Roboto+Slab:wght@100;400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>        
 
     </head>
     <body>
@@ -179,6 +180,48 @@
                     <a href="" class="block-other__btn">Brouse all books</a>
                 </div>
             </div>
+            <div class="page page-slider">
+                <div class="wrap">
+                    <div class="block-slider">
+                        <div>
+                            <div class="block-slider-ava">
+                                <div class="block-slider-thumb">
+                                    <img src="..//img/avatar-1.jpg" alt="">
+                                </div>
+                                    <span div class="block-slider-bg"></span>
+                            </div>
+                            <h3>Kate Dennings</h3>
+                            <p class="block-slider__desc block-slider__expert">Calligraphy expert</p>
+                            <p class="block-slider__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                        </div>
+                        <div>
+                            <div class="block-slider-ava">
+                                <div class="block-slider-thumb">
+                                    <img src="..//img/avatar-1.jpg" alt="">
+                                </div>
+                                    <span div class="block-slider-bg"></span>
+                            </div>
+                            <h3>Kate Denning</h3>
+                            <p class="block-slider__desc block-slider__expert">Calligraphy expert</p>
+                            <p class="block-slider__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                        <div>
+                            <div class="block-slider-ava">
+                                <div class="block-slider-thumb">
+                                    <img src="..//img/avatar-1.jpg" alt="">
+                                </div>
+                                    <span div class="block-slider-bg"></span>
+                            </div>
+                            <h3>Kate Denning</h3>
+                            <p class="block-slider__desc block-slider__expert">Calligraphy expert</p>
+                            <p class="block-slider__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+
+                    </div>
+                </div>
+                <svg class="page__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 849"><path d="M-1 0l802 61 799-61v789l-799 60-802-60V0z" fill="#44444f" fill-rule="evenodd"/></svg>
+                   
+            </div>
             <div class="page">
                 <div class="wrap">
                     <div class="block-events">   
@@ -272,8 +315,8 @@
                     <div class="block-footer">
                         <div>
                             <a href="" class="block-footer__logo"></a>
-                            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            <p>© 2018 Bukee Private Limited.</p>
+                            <p class="block-footer__text">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p class="block-footer__text">© 2018 Bukee Private Limited.</p>
                                 
                         </div>
                         <div>
@@ -306,13 +349,16 @@
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
-            <script src="https://kit.fontawesome.com/2181d5163d.js" crossorigin="anonymous"></script>   
+        <script src="https://kit.fontawesome.com/2181d5163d.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>   
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> 
         <script src="js/main.js"></script>
+        <script>                        
+                $(document).ready(function(){
+                $('.block-slider').slick({
+                    dots: true,
+                    arrows: false  });
+                });
+        </script>
     </body>
 </html>
